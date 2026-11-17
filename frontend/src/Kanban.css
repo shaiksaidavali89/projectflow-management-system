@@ -1,0 +1,152 @@
+
+.kanban-page {
+    padding: 24px;
+    color: #243047;
+}
+
+.kanban-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.kanban-header h2 {
+    margin: 0 0 6px;
+    font-size: 26px;
+}
+
+.kanban-header p {
+    margin: 0;
+    color: #718096;
+}
+
+.kanban-refresh {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #3157d5;
+    color: white;
+    cursor: pointer;
+}
+
+.kanban-board {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 16px;
+    align-items: start;
+    overflow-x: auto;
+}
+
+.kanban-column {
+    min-height: 300px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #f1f4f9;
+}
+
+.kanban-column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.kanban-column-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.kanban-column-header span {
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: white;
+    font-size: 13px;
+}
+
+.kanban-card {
+    margin-bottom: 13px;
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.kanban-card h4 {
+    margin: 0 0 9px;
+    font-size: 16px;
+}
+
+.kanban-card p {
+    color: #718096;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.kanban-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 12px 0;
+    color: #526078;
+    font-size: 12px;
+}
+
+.kanban-card label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.kanban-card select {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #d5dce8;
+    border-radius: 7px;
+    background: white;
+}
+
+.kanban-empty,
+.kanban-info {
+    color: #8792a5;
+    font-size: 13px;
+}
+
+.kanban-success,
+.kanban-error {
+    margin-bottom: 15px;
+    padding: 11px;
+    border-radius: 8px;
+}
+
+.kanban-success {
+    background: #e7f8ed;
+    color: #18763a;
+}
+
+.kanban-error {
+    background: #fdeaea;
+    color: #b42318;
+}
+
+@media (max-width: 1000px) {
+    .kanban-board {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .kanban-page {
+        padding: 12px;
+    }
+
+    .kanban-header {
+        align-items: flex-start;
+    }
+
+    .kanban-board {
+        grid-template-columns: minmax(220px, 1fr);
+    }
+}

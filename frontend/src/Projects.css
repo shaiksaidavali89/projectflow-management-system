@@ -1,0 +1,236 @@
+
+.projects-page {
+    padding: 10px 0;
+    color: #243047;
+}
+
+.projects-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.projects-heading h2 {
+    margin: 0 0 7px;
+    font-size: 24px;
+}
+
+.projects-heading p {
+    margin: 0;
+    color: #718096;
+}
+
+.project-create-button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #3157d5;
+    color: white;
+    cursor: pointer;
+}
+
+.projects-message {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.projects-message.success {
+    background: #e7f8ed;
+    color: #18763a;
+}
+
+.projects-message.error {
+    background: #fdeaea;
+    color: #b42318;
+}
+
+.projects-form {
+    padding: 22px;
+    margin-bottom: 22px;
+    background: white;
+    border: 1px solid #e3e8f0;
+    border-radius: 12px;
+}
+
+.projects-form h3 {
+    margin-top: 0;
+}
+
+.projects-form label {
+    display: block;
+    margin: 13px 0 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.projects-form input,
+.projects-form textarea,
+.projects-form select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d5dce8;
+    border-radius: 7px;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+.projects-form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.project-date-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.projects-form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.projects-form-actions button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.projects-form-actions button:first-child {
+    background: #3157d5;
+    color: white;
+}
+
+.projects-form-actions button:last-child {
+    background: #e9edf4;
+    color: #344054;
+}
+
+.projects-filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.projects-filters input,
+.projects-filters select {
+    padding: 11px;
+    border: 1px solid #d5dce8;
+    border-radius: 8px;
+    background: white;
+}
+
+.projects-filters input {
+    flex: 1;
+}
+
+.projects-filters button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #e8edff;
+    color: #3157d5;
+    cursor: pointer;
+}
+
+.projects-table-wrapper {
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e5eaf1;
+}
+
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+.projects-table th,
+.projects-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.projects-table th {
+    background: #f7f8fc;
+    color: #64748b;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.projects-table td strong,
+.projects-table td small {
+    display: block;
+}
+
+.projects-table td small {
+    margin-top: 5px;
+    color: #8993a5;
+}
+
+.project-status {
+    display: inline-block;
+    padding: 6px 10px;
+    background: #edf1ff;
+    color: #3157d5;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.project-row-actions {
+    display: flex;
+    gap: 7px;
+}
+
+.project-row-actions button {
+    padding: 7px 11px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.project-edit-button {
+    background: #e8edff;
+    color: #3157d5;
+}
+
+.project-delete-button {
+    background: #fdeaea;
+    color: #c0392b;
+}
+
+.projects-empty {
+    padding: 35px;
+    text-align: center;
+    color: #8792a5;
+    background: white;
+    border-radius: 10px;
+}
+
+.projects-count {
+    margin-top: 15px;
+    color: #718096;
+    font-size: 13px;
+}
+
+@media (max-width: 650px) {
+    .projects-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .projects-filters {
+        flex-direction: column;
+    }
+
+    .project-date-fields {
+        grid-template-columns: 1fr;
+    }
+}

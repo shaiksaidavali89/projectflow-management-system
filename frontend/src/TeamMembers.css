@@ -1,0 +1,260 @@
+
+.team-page {
+    width: 100%;
+    padding: 24px;
+    color: #20243a;
+}
+
+.team-header,
+.team-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.team-header h1 {
+    margin: 0 0 7px;
+    font-size: 28px;
+}
+
+.team-header p,
+.team-section-heading p {
+    margin: 0;
+    color: #777e91;
+}
+
+.team-refresh-btn,
+.team-add-form button {
+    background: #5146e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.team-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.team-stat-card {
+    background: white;
+    border: 1px solid #e9eaf1;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 12px rgba(30, 35, 70, 0.04);
+}
+
+.team-stat-card span {
+    display: block;
+    color: #777e91;
+    margin-bottom: 10px;
+}
+
+.team-stat-card strong {
+    font-size: 27px;
+}
+
+.team-section {
+    background: white;
+    border: 1px solid #e9eaf1;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 3px 12px rgba(30, 35, 70, 0.04);
+}
+
+.team-section h2 {
+    margin: 0 0 6px;
+    font-size: 20px;
+}
+
+.team-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.team-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+    margin-top: 15px;
+}
+
+.team-table th,
+.team-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #eceef4;
+    text-align: left;
+    font-size: 14px;
+}
+
+.team-table th {
+    background: #f7f8fc;
+    color: #646b80;
+    font-weight: 600;
+}
+
+.team-table td strong,
+.team-member-row strong {
+    display: block;
+}
+
+.team-table td small,
+.team-member-row small {
+    display: block;
+    color: #858b9b;
+    margin-top: 5px;
+}
+
+.team-table select,
+.team-assignment-controls select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dfe2eb;
+    border-radius: 7px;
+    background: white;
+    color: #30364b;
+}
+
+.team-status {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.team-status.active {
+    background: #e5f8ed;
+    color: #16834b;
+}
+
+.team-status.inactive {
+    background: #fff0ed;
+    color: #c34c39;
+}
+
+.team-action-btn {
+    border: none;
+    border-radius: 7px;
+    padding: 9px 13px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.team-action-btn.deactivate {
+    background: #fff0ed;
+    color: #c34c39;
+}
+
+.team-action-btn.activate {
+    background: #e5f8ed;
+    color: #16834b;
+}
+
+.team-assignment-controls {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.team-assignment-controls label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #555d72;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.team-add-form {
+    display: flex;
+    align-items: end;
+    gap: 12px;
+}
+
+.team-add-form label {
+    flex: 1;
+}
+
+.team-add-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.team-members-list {
+    margin-top: 25px;
+}
+
+.team-members-list h3 {
+    margin-bottom: 14px;
+}
+
+.team-member-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    border: 1px solid #eceef4;
+    border-radius: 9px;
+    margin-bottom: 10px;
+}
+
+.team-success,
+.team-error {
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+.team-success {
+    background: #e8f8ee;
+    color: #167a45;
+}
+
+.team-error {
+    background: #fff0ed;
+    color: #b83d32;
+}
+
+.team-empty,
+.team-loading {
+    padding: 20px;
+    color: #777e91;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .team-page {
+        padding: 14px;
+    }
+
+    .team-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .team-assignment-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .team-add-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .team-header {
+        align-items: flex-start;
+    }
+
+    .team-section {
+        padding: 15px;
+    }
+}
