@@ -4,7 +4,7 @@
 .env.*
 !.env.example
 
-# Python virtual environment
+# Python virtual environments
 venv/
 .venv/
 env/
@@ -46,3 +46,11 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.bak
+
+# Local Postman workspace settings
+.postman/
+postman/
+!docs/ProjectFlow_API_Collection.json
+
+# Python test cache
+.pytest_cache/

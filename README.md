@@ -1,9 +1,7 @@
 
-
-
 # ProjectFlow – Advanced Project & Team Management System
 
-ProjectFlow is a full-stack web application designed to manage projects, tasks, team members, and collaboration activities in one centralized workspace.
+ProjectFlow is a full-stack project and team management application designed to organize projects, tasks, team members, and collaboration activities in one centralized workspace.
 
 ## Features
 
@@ -15,25 +13,20 @@ ProjectFlow is a full-stack web application designed to manage projects, tasks, 
 - Admin, Project Manager, and Team Member roles
 
 ### Dashboard
-- Total projects
-- Total tasks
-- Completed tasks
-- Pending tasks
+- Total projects and tasks
+- Completed and pending tasks
 - Recent projects
 
 ### Project Management
-- Create projects
-- View all projects
-- Update project details
-- Delete projects
+- Create, view, update, and delete projects
 - Search and filter projects
 - Manage project members
 
 ### Task Management
 - Create, view, update, and delete tasks
 - Assign tasks to users
-- Set task priorities
-- Update task status
+- Set priorities: Low, Medium, High, Critical
+- Track task status
 - Search and filter tasks
 - Set task due dates
 
@@ -48,75 +41,76 @@ ProjectFlow is a full-stack web application designed to manage projects, tasks, 
 - View registered users
 - Update user roles
 - Activate and deactivate accounts
-- Assign members to projects
-- Remove members from projects
+- Assign and remove project members
 
 ### Collaboration
 - Task comments
 - Activity history
 - Project member management
 
+### Automated Testing
+- Pytest-based backend API tests
+- Health endpoint tests
+- Authentication validation tests
+- Project and task authorization tests
+
 ## Technology Stack
 
-### Frontend
-- React.js
-- Vite
-- JavaScript
-- Axios
-- CSS
-- React Router DOM
-
-### Backend
-- Python
-- FastAPI
-- SQLAlchemy
-- JWT Authentication
-- Passlib and bcrypt
-- Pydantic
-
-### Database
-- PostgreSQL
-- Alembic Database Migrations
+| Layer | Technologies |
+|---|---|
+| Frontend | React.js, Vite, JavaScript, Axios, CSS |
+| Backend | Python, FastAPI, SQLAlchemy, Pydantic |
+| Authentication | JWT, Passlib, bcrypt |
+| Database | PostgreSQL |
+| Migrations | Alembic |
+| Testing | Pytest, HTTPX |
+| API Documentation | Swagger UI, Postman |
 
 ## Project Structure
 
 ```text
 advanced-project-management/
-│
-├── backend/
-│   ├── app/
-│   │   ├── models/
-│   │   ├── routers/
-│   │   ├── schemas/
-│   │   ├── utils/
-│   │   ├── database.py
-│   │   └── main.py
-│   │
-│   ├── alembic/
-│   ├── scripts/
-│   ├── requirements.txt
-│   └── .env
-│
-├── frontend/
-│   ├── src/
-│   │   ├── services/
-│   │   ├── App.jsx
-│   │   ├── Projects.jsx
-│   │   ├── Tasks.jsx
-│   │   ├── Kanban.jsx
-│   │   ├── TeamMembers.jsx
-│   │   └── components/
-│   │
-│   ├── package.json
-│   └── .env
-│
-├── .gitignore
-└── README.md
+|
+|-- backend/
+|   |-- app/
+|   |   |-- models/
+|   |   |-- routers/
+|   |   |-- schemas/
+|   |   |-- utils/
+|   |   |-- database.py
+|   |   |-- main.py
+|   |
+|   |-- alembic/
+|   |-- scripts/
+|   |-- tests/
+|   |   |-- test_api.py
+|   |
+|   |-- requirements.txt
+|   |-- alembic.ini
+|   |-- .env.example
+|
+|-- frontend/
+|   |-- src/
+|   |   |-- services/
+|   |   |-- components/
+|   |   |-- App.jsx
+|   |   |-- Projects.jsx
+|   |   |-- Tasks.jsx
+|   |   |-- Kanban.jsx
+|   |   |-- TeamMembers.jsx
+|   |
+|   |-- package.json
+|   |-- .env.example
+|
+|-- docs/
+|-- postman/
+|-- .gitignore
+|-- README.md
 ```
 
 ## Database Tables
 
-The application uses the following tables:
+The application uses the following PostgreSQL tables:
 
 1. Users
 2. Roles
@@ -131,8 +125,9 @@ The application uses the following tables:
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd advanced-project-management
+git clone https://github.com/shaiksaidavali89/projectflow-management-system.git
+
+cd projectflow-management-system
 ```
 
 ### 2. Backend Setup
@@ -147,12 +142,12 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Configure your backend `.env` file with your PostgreSQL connection string and a secure JWT secret.
+Create a `.env` file in the backend directory using your own PostgreSQL credentials and a secure JWT secret.
 
 Apply database migrations:
 
 ```bash
-alembic upgrade head
+python -m alembic upgrade head
 ```
 
 Start the backend:
@@ -165,7 +160,7 @@ Backend URL:
 
 http://127.0.0.1:8000
 
-API documentation:
+Swagger API documentation:
 
 http://127.0.0.1:8000/docs
 
@@ -179,7 +174,7 @@ cd frontend
 npm install
 ```
 
-Configure the frontend `.env` file:
+Create a `.env` file:
 
 ```env
 VITE_API_URL=http://127.0.0.1:8000
@@ -195,11 +190,41 @@ Frontend URL:
 
 http://localhost:5173
 
+## Running Automated Tests
+
+Open a terminal in the backend directory.
+
+Activate the virtual environment:
+
+```bash
+venv\Scripts\activate
+```
+
+Run all automated tests:
+
+```bash
+python -m pytest -v
+```
+
+The current test suite includes nine tests covering:
+
+- Root endpoint
+- Health endpoint
+- Registration validation
+- Login validation
+- Invalid login
+- Project authentication
+- Task authentication
+- Project creation authorization
+- Task creation authorization
+
+Latest verified result: **9 tests passed.**
+
 ## API Modules
 
 | Module | Description |
 |---|---|
-| Authentication | Register, login, and current user |
+| Authentication | Registration, login, current user |
 | Users | User management and roles |
 | Projects | Project CRUD operations |
 | Tasks | Task CRUD operations |
@@ -221,12 +246,12 @@ http://localhost:5173
 - Email notifications
 - File attachments
 - Docker deployment
-- Automated testing
+- Expanded automated test coverage
 - Cloud deployment
 
 ## Author
 
-Project developed as an Advanced Project & Team Management System.
+Developed as an Advanced Project & Team Management System.
 
 ## License
 
