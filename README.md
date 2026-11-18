@@ -256,3 +256,25 @@ Developed as an Advanced Project & Team Management System.
 ## License
 
 This project is developed for educational and demonstration purposes.
+
+
+---
+
+## Project Demo Video
+
+Watch the complete demonstration of the ProjectFlow application:
+
+[Watch ProjectFlow Demo Video](https://drive.google.com/file/d/1Yg2nVAs0bMWHL6gkvmk3Nb8IBOxaN5tB/view?usp=sharing)
+
+## Application Screenshots
+
+The application screenshots are available in the [docs/screenshots](docs/screenshots/) folder.
+
+## Developer
+
+**Project:** Advanced Project & Team Management System
+
+**Application Name:** ProjectFlow
+
+**GitHub:** [shaiksaidavali89](https://github.com/shaiksaidavali89)
+
